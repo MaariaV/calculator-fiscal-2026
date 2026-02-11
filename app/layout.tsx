@@ -1,18 +1,13 @@
-// app/layout.tsx
-import "./globals.css";
-import { ReactNode } from "react";
-import Head from "next/head";
-
-export default function RootLayout({ children }: { children: ReactNode }) {
+export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="ro">
-      <Head>
-        <title>Calculator Fiscal România 2026</title>
-        <meta name="description" content="Calculator fiscal pentru PFA și SRL în România 2026" />
-        {/* PROFITSHARE META TAG */}
+      <head>
+        <meta charSet="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta name="profitshareid" content="5f3a30c63c371c6c5a1fb9314269f0df" />
-      </Head>
+        <title>Calculator Fiscal România 2026</title>
+      </head>
       <body>{children}</body>
     </html>
-  );
+  )
 }
